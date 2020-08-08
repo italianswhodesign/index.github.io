@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www.italianswho.design [NC]
+RewriteRule ^(.*)$ http://italianswho.design/$1 [L,R=301]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+ErrorDocument 404   https://italianswho.design/404.html
