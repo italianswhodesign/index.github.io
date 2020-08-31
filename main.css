@@ -92,6 +92,8 @@ h4 {
 }
 
 
+
+
 .container {
 font-family: 'Lato', sans-serif;
   font-weight: 900;
@@ -221,6 +223,23 @@ section h4:after {
 }
 
 /* -------------------------------
+		 Banner 
+----------------------------------*/
+.banner {
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  width: 98%;
+  background: rgba(192,192,192, 0.8);
+  border-radius: 3px;
+  color: #f9f9f9;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0px;
+  transition: all 0.3s ease-out;
+}
+
+/* -------------------------------
 		 Filter Div 
 ----------------------------------*/
 .container {
@@ -310,27 +329,33 @@ section h4:after {
   padding: 0;
 }
 
-.featuresList {
+.List {
   list-style-type: none;
 }
-.featuresList li {
+.List li {
   float: left;
   padding-right: 2%;
   margin-bottom: 30px;
   width: 25%;
 }
-.featuresList li.last {
+.List li.last {
   float: right;
   padding-right: 0;
 }
 
-.featureTitle {
+.Title {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   letter-spacing: .75px;
+  float: left;
+  padding-right: 2%;
+  margin-bottom: 30px;
+  width: 25%;
+  margin-right: 25px;
+  
 }
 
-.featureSubtitle {
+.Subtitle {
   font-size: 14px;
   margin-top: 5px;
   letter-spacing: .75px;
@@ -576,7 +601,7 @@ section h4:after {
 		 MEDIA QUERIES 
 ----------------------------------*/
 @media all and (max-width: 1024px) {
-  .featuresList li {
+  .Title {
     width: 32%;
   }
 
@@ -623,10 +648,10 @@ section h4:after {
     font-size: 7.5vw;
   }
 
-  .featuresList li {
+  .Title {
     width: 50%;
   }
-  .featuresList .clearfix:after {
+  .List .clearfix:after {
     display: none;
   }
 
@@ -641,7 +666,7 @@ section h4:after {
     letter-spacing: -.45vw;
   }
 
-  .featuresList li, .shortColumn {
+  .Title, .shortColumn {
     width: 100%;
   }
 
@@ -661,4 +686,70 @@ section h4:after {
   .jstext {
     padding-right: 0px;
   }
+}
+
+/* -------------------------------
+		 SCROLL
+----------------------------------*/
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 5px;
+  background: #292929;
+  width: 0%;
+}
+
+/* -------------------------------
+		 SCROLL ARROW
+----------------------------------*/
+.arrow{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #c1c1c1;
+    border-right: 3px solid #c1c1c1;
+
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
 }
