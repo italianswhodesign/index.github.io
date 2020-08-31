@@ -48,7 +48,7 @@
 </head>
 <body class="noTransition">
 		
-		<script src="https://unpkg.com/tripetto-runner-foundation"></script>
+<script src="https://unpkg.com/tripetto-runner-foundation"></script>
 <script src="https://unpkg.com/tripetto-runner-autoscroll"></script>
 <script src="https://unpkg.com/tripetto-services"></script>
 <script>
@@ -56,15 +56,15 @@ var tripetto = TripettoServices.init({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXV
 
 TripettoAutoscroll.run({
     element: document.body, /* Or supply your own element here */
-    definition: {"name":"italianswho.design - Get Listed","description":"Italians Who Design is a repository where the most talented Italian designers are gathered. Get listed.","language":"en","keywords":["italian | designer | design"],"preface":{"title":"Get listed or nominate an italian designer you think it deserve it."},"epilogue":{"title":"Congrats!","description":"We add a handful of new names once a week, so it can take some time but (don't worry) every submitted profile will be listed.","button":{"label":"Back to Home","url":"https://italianswho.design","target":"self"}},"clusters":[{"id":"5034c21ad0ea9df8cc8c624a48517a289e425d3ae33176d69ed7a4a94d151e6b","name":"Name","nodes":[{"id":"e4ab8c7a9dfa6c62472a7c033de0b00d7446bd9931673bc18d48864a9976fbfb","explanation":"Enter your name or that of the designer you want to nominate","name":"Let's start! What's the name?","nameVisible":true,"placeholder":"Type here","slots":[{"id":"ce3ae0ad5fc8515d62ca498bf8950e55aef93390855440cf05825c6eeddd6911","type":"text","kind":"static","reference":"value","label":"Text"}],"block":{"type":"tripetto-block-text","version":"3.0.1"}},{"id":"e60ee4eb6271c13aefadabc7c0abff2c2dcaf308002a48f4303eb38d6eaaf536","explanation":"Enter the city in which you (or the designer you want to nominate) are based","disabled":true,"name":"Wehre are you based?","nameVisible":true,"placeholder":"Type here","slots":[{"id":"6a3a30486c8a2b7801cbb0351e919cc02f8ae9f804180bdbbc644ff8f3aad532","type":"text","kind":"static","reference":"value","label":"Text"}],"block":{"type":"tripetto-block-text","version":"3.0.1"}}]},{"id":"60c5a998b7de46dc52bef11a893427837834ce10ef4c13e084b43457fc3d18d3","name":"Role","nodes":[{"id":"c6ac8b1f6d82b3da71da8772769af27ce8e002d4ad9eb4df53885ef671101ac6","name":"Good! Now, what's the role or the core espertise?","nameVisible":true,"slots":[{"id":"3174c9568f1149debb0b8b15df7a83b10ea3b906736c65a35aa6079ad0a09a25","type":"string","kind":"static","reference":"button","label":"Selected button"}],"block":{"type":"tripetto-block-radiobuttons","version":"3.0.1","buttons":[{"id":"cd5c768ff5369860b6b60ab80a1798cfff837c8854458d4a1ab406bb791999c0","name":"UX/Product Design","value":""},{"id":"222254a4f0ac65b4d82ddf698b2bd25fe8665c81b1f3f4f4575275805f207154","name":"Branding Design","value":""},{"id":"e6d660d6022fc6915d614aafe5793c5e626932438d766752bc7124f777ce6594","name":"Graphic Design","value":""},{"id":"4d661c09ab969f52449db29dcad169a0ed971104add0e90961e530d9b8a6d3d4","name":"Motion Design","value":""},{"id":"46e724563c1a7eee4857308957e6fc01725f4b5d358ff2f413430950474ec2f0","name":"Illustration","value":""}]}}]},{"id":"ce6f5a89d73ec9e12fc8dfedea3e91363f99989188bcd8cc31d2cbecc8f14e10","name":"URL","nodes":[{"id":"9917317186d79709efa6cffa0ed27fb020404d6b0197e8d383d3e690d2636688","explanation":"You can share website, blog, portfolio, linkedin or social media.","name":"Almost done! Any relevant URL to share?","nameVisible":true,"slots":[{"id":"7027a7743ce784b846faffc7ef40294dd2bd48f2bcf316caab918410b37f582d","type":"string","kind":"static","reference":"url","label":"URL"}],"block":{"type":"tripetto-block-url","version":"3.0.1"}},{"id":"372d7f7814f1086ae29eba54110d682a3596da8d8199ec194b5f38f720be3854","name":"By submitting this data, I agree that information will be published on italianswho.design","slots":[{"id":"f35dabec2aebede40b24c4fc3fd7d64800c9fe787dc126a143f5747e941529fa","type":"boolean","kind":"static","reference":"checked","label":"Checkbox checked","required":true}],"block":{"type":"tripetto-block-checkbox","version":"3.0.1"}}]}],"builder":{"name":"tripetto","version":"2.0.4"}},
-    styles: {"direction":"vertical","verticalAlignment":"middle","hidePast":true,"hideUpcoming":true,"showNavigation":"auto","showProgressbar":true,"showEnumerators":false,"autoFocus":false,"showSeparateSubmit":true,"showPreviousButton":true,"showScrollbar":false,"noBranding":true,"contract":{"name":"tripetto-runner-autoscroll","version":"3.6.0"},"font":{"size":18,"family":"Helvetica"},"background":{"positioning":"auto"},"inputs":{"borderSize":1,"roundness":8,"errorColor":"red","agreeColor":"green","declineColor":"red"},"buttons":{"mode":"fill","roundness":8}},
+    definition: tripetto.definition,
+    styles: tripetto.styles,
+    l10n: tripetto.l10n,
+    locale: tripetto.locale,
+    translations: tripetto.translations,
     attachments: tripetto.attachments,
     onSubmit: tripetto.onSubmit
 });
 </script>
-
-		
-
 
 </body>
 </html>
