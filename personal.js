@@ -1,33 +1,7 @@
 /* ----------------------- 
     GLOBALS 
 -------------------------*/
-/* ----------------------- 
-var sections = [
-		{	sentence: " making cool stuff on Findomestic",
-		},
-		{	sentence: " planning his next trip",
-		},
-		{	sentence: " complaining about stuff",
-		},
-		{	sentence: " fighting for usability",
-		},
-		{	sentence: " reading another book",
-		},
-		{	sentence: " thinking about his next article on Medium",
-		},
-	];
 
-var i = 0;
-var j = 0;
-var k = 0;
-var lengthSentence = 0;
-var lengthArray = sections.length;
-var forward = true;
-var beginning = "Italians who <br>design";
-var currentPart = "";
-var interval = 50;
-var opening = false;
--------------------------*/
 
 /* ----------------------- 
     TYPING 
@@ -222,7 +196,7 @@ function loopColors(){
 }*/
 
 /* ----------------------- 
-    NOOB SHIT 
+    BACKGROUND 
 -------------------------*/
 	
 $(document).ready(function(){
@@ -310,7 +284,7 @@ $(document).ready(function(){
 
 
 /*--------------------
-		TWEENMAX 
+		LOOP 
 ----------------------*/
 $(document).ready(function($) {
 	var bgFixed = $(".fixedBg");
@@ -387,7 +361,16 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-
+<script>
+$(function() {
+  var parent = $("#shuffle");
+  var divs = parent.children();
+  divs.sort(function(a, b) {
+    return 0.5 - Math.random();
+  });
+  parent.append(divs);
+});
+</script>
 
 /*--------------------
 		INSPECT 
@@ -401,16 +384,4 @@ $(document).keydown(function(e){
  
 });
 ----------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
 
