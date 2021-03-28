@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /getlisted.html
 Disallow: /firms/
+
 Allow: /index.html
-Allow: /firms/index.html
